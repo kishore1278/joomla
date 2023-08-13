@@ -1,0 +1,2 @@
+# Exclude the Joomla configuration file
+/configuration.php
