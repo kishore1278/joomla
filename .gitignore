@@ -1,15 +1,4 @@
 
 /configuration.php
 
-# Never ignore #
-# Only apply this rule to the main repository's gitignore files
-!/.gitignore
-!/build/.gitignore
 
-
-# Build related
-RoboFile.ini
-
-# Media Manager
-/media/com_media/js/mediamanager.min.js.map
-/media/com_media/css/mediamanager.min.css.map
