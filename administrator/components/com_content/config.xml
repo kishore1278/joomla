@@ -261,8 +261,6 @@
 			type="number"
 			label="JGLOBAL_SHOW_READMORE_LIMIT_LABEL"
 			filter="integer"
-			validate="number"
-			min="0"
 			default="100"
 			showon="show_readmore:1[AND]show_readmore_title:1"
 		/>
@@ -418,8 +416,6 @@
 			type="number"
 			label="JGLOBAL_HISTORY_LIMIT_OPTIONS_LABEL"
 			filter="integer"
-			validate="number"
-			min="0"
 			default="10"
 			showon="save_history:1"
 		/>
@@ -727,8 +723,6 @@
 			type="number"
 			label="JGLOBAL_NUM_LEADING_ARTICLES_LABEL"
 			filter="integer"
-			validate="number"
-			min="0"
 			default="1"
 		/>
 
@@ -744,8 +738,6 @@
 			type="number"
 			label="JGLOBAL_NUM_INTRO_ARTICLES_LABEL"
 			filter="integer"
-			validate="number"
-			min="0"
 			default="4"
 		/>
 
@@ -762,8 +754,6 @@
 			type="number"
 			label="JGLOBAL_NUM_COLUMNS_LABEL"
 			filter="integer"
-			validate="number"
-			min="0"
 			default="1"
 		/>
 
@@ -783,8 +773,6 @@
 			type="number"
 			label="JGLOBAL_NUM_LINKS_LABEL"
 			filter="integer"
-			validate="number"
-			min="0"
 			default="4"
 		/>
 

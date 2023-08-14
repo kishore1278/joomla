@@ -34,7 +34,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    integer
      * @since  1.6
      */
-    public $id;
+    public $id = null;
 
     /**
      * The id of the category in the asset table
@@ -42,7 +42,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    integer
      * @since  1.6
      */
-    public $asset_id;
+    public $asset_id = null;
 
     /**
      * The id of the parent of category in the asset table, 0 for category root
@@ -50,7 +50,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    integer
      * @since  1.6
      */
-    public $parent_id;
+    public $parent_id = null;
 
     /**
      * The lft value for this category in the category tree
@@ -58,7 +58,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    integer
      * @since  1.6
      */
-    public $lft;
+    public $lft = null;
 
     /**
      * The rgt value for this category in the category tree
@@ -66,7 +66,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    integer
      * @since  1.6
      */
-    public $rgt;
+    public $rgt = null;
 
     /**
      * The depth of this category's position in the category tree
@@ -74,7 +74,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    integer
      * @since  1.6
      */
-    public $level;
+    public $level = null;
 
     /**
      * The extension this category is associated with
@@ -82,7 +82,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    integer
      * @since  1.6
      */
-    public $extension;
+    public $extension = null;
 
     /**
      * The menu title for the category (a short name)
@@ -90,15 +90,15 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    string
      * @since  1.6
      */
-    public $title;
+    public $title = null;
 
     /**
-     * The alias for the category
+     * The the alias for the category
      *
      * @var    string
      * @since  1.6
      */
-    public $alias;
+    public $alias = null;
 
     /**
      * Description of the category.
@@ -106,7 +106,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    string
      * @since  1.6
      */
-    public $description;
+    public $description = null;
 
     /**
      * The publication status of the category
@@ -114,7 +114,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    boolean
      * @since  1.6
      */
-    public $published;
+    public $published = null;
 
     /**
      * Whether the category is or is not checked out
@@ -122,7 +122,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    boolean
      * @since  1.6
      */
-    public $checked_out;
+    public $checked_out = null;
 
     /**
      * The time at which the category was checked out
@@ -130,7 +130,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    string
      * @since  1.6
      */
-    public $checked_out_time;
+    public $checked_out_time = null;
 
     /**
      * Access level for the category
@@ -138,7 +138,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    integer
      * @since  1.6
      */
-    public $access;
+    public $access = null;
 
     /**
      * JSON string of parameters
@@ -146,7 +146,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    string
      * @since  1.6
      */
-    public $params;
+    public $params = null;
 
     /**
      * Metadata description
@@ -154,15 +154,15 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    string
      * @since  1.6
      */
-    public $metadesc;
+    public $metadesc = null;
 
     /**
-     * Keywords for metadata
+     * Key words for metadata
      *
      * @var    string
      * @since  1.6
      */
-    public $metakey;
+    public $metakey = null;
 
     /**
      * JSON string of other metadata
@@ -170,7 +170,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    string
      * @since  1.6
      */
-    public $metadata;
+    public $metadata = null;
 
     /**
      * The ID of the user who created the category
@@ -178,7 +178,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    integer
      * @since  1.6
      */
-    public $created_user_id;
+    public $created_user_id = null;
 
     /**
      * The time at which the category was created
@@ -186,7 +186,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    string
      * @since  1.6
      */
-    public $created_time;
+    public $created_time = null;
 
     /**
      * The ID of the user who last modified the category
@@ -194,7 +194,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    integer
      * @since  1.6
      */
-    public $modified_user_id;
+    public $modified_user_id = null;
 
     /**
      * The time at which the category was modified
@@ -202,7 +202,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    string
      * @since  1.6
      */
-    public $modified_time;
+    public $modified_time = null;
 
     /**
      * Number of times the category has been viewed
@@ -210,7 +210,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    integer
      * @since  1.6
      */
-    public $hits;
+    public $hits = null;
 
     /**
      * The language for the category in xx-XX format
@@ -218,7 +218,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    string
      * @since  1.6
      */
-    public $language;
+    public $language = null;
 
     /**
      * Number of items in this category or descendants of this category
@@ -226,7 +226,15 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    integer
      * @since  1.6
      */
-    public $numitems;
+    public $numitems = null;
+
+    /**
+     * Number of children items
+     *
+     * @var    integer
+     * @since  1.6
+     */
+    public $childrennumitems = null;
 
     /**
      * Slug for the category (used in URL)
@@ -234,7 +242,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    string
      * @since  1.6
      */
-    public $slug;
+    public $slug = null;
 
     /**
      * Array of  assets
@@ -242,7 +250,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    array
      * @since  1.6
      */
-    public $assets;
+    public $assets = null;
 
     /**
      * Path from root to this category
@@ -266,7 +274,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      * @var    Categories
      * @since  1.6
      */
-    protected $_constructor;
+    protected $_constructor = null;
 
     /**
      * Class constructor
@@ -284,7 +292,11 @@ class CategoryNode extends CMSObject implements NodeInterface
             if ($constructor) {
                 $this->_constructor = $constructor;
             }
+
+            return true;
         }
+
+        return false;
     }
 
     /**
@@ -292,7 +304,7 @@ class CategoryNode extends CMSObject implements NodeInterface
      *
      * If the category already has a parent, the link is unset
      *
-     * @param   NodeInterface  $parent  CategoryNode for the parent to be set or null
+     * @param   CategoryNode|null  $parent  CategoryNode for the parent to be set or null
      *
      * @return  void
      *
@@ -307,12 +319,12 @@ class CategoryNode extends CMSObject implements NodeInterface
 
         $this->_parent = $parent;
 
-        $this->_parent->_children[] = &$this;
+        $this->_parent->_children[] = & $this;
 
         if (\count($this->_parent->_children) > 1) {
             end($this->_parent->_children);
             $this->_leftSibling                = prev($this->_parent->_children);
-            $this->_leftSibling->_rightsibling = &$this;
+            $this->_leftSibling->_rightsibling = & $this;
         }
 
         if ($this->parent_id != 1) {
@@ -379,9 +391,9 @@ class CategoryNode extends CMSObject implements NodeInterface
 
         if ($right) {
             return $this->_rightSibling;
+        } else {
+            return $this->_leftSibling;
         }
-
-        return $this->_leftSibling;
     }
 
     /**
@@ -477,48 +489,12 @@ class CategoryNode extends CMSObject implements NodeInterface
             $count = $this->numitems;
 
             foreach ($this->getChildren() as $child) {
-                $count += $child->getNumItems(true);
+                $count = $count + $child->getNumItems(true);
             }
 
             return $count;
         }
 
         return $this->numitems;
-    }
-
-    /**
-     * Serialize the node.
-     *
-     * @since   4.3.2
-     */
-    public function __serialize()
-    {
-        $vars = get_object_vars($this);
-
-        // Store constructor as array of options.
-        if ($this->_constructor) {
-            $vars['_constructor'] = $this->_constructor->getOptions();
-        }
-
-        return $vars;
-    }
-
-    /**
-     * Unserialize the node.
-     *
-     * @param   array  $data
-     *
-     * @since   4.3.2
-     */
-    public function __unserialize($data)
-    {
-        foreach ($data as $key => $value) {
-            $this->$key = $value;
-        }
-
-        // Restore constructor from array of options.
-        if ($this->_constructor) {
-            $this->_constructor = Categories::getInstance($this->_constructor['extension'], $this->_constructor);
-        }
     }
 }

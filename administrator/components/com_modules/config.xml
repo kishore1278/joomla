@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-	<help key="Modules:_Options"/>
+	<help key="Module:_Options"/>
 	<inlinehelp button="show"/>
 	<fieldset
 		name="modules"

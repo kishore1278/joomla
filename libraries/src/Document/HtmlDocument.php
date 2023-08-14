@@ -449,7 +449,7 @@ class HtmlDocument extends Document implements CacheControllerFactoryAwareInterf
      *
      * @since   1.7.0
      */
-    public function addFavicon($href, $type = 'image/vnd.microsoft.icon', $relation = 'icon')
+    public function addFavicon($href, $type = 'image/vnd.microsoft.icon', $relation = 'shortcut icon')
     {
         $href = str_replace('\\', '/', $href);
         $this->addHeadLink($href, $relation, 'rel', ['type' => $type]);
@@ -590,11 +590,7 @@ class HtmlDocument extends Document implements CacheControllerFactoryAwareInterf
             $options['title'] = $args[3] ?? null;
         }
 
-        $type  = $options['type'] ?? '';
-        $name  = $options['name'] ?? '';
-        $title = $options['title'] ?? '';
-
-        parent::$_buffer[$type][$name][$title] = $content;
+        parent::$_buffer[$options['type']][$options['name']][$options['title']] = $content;
 
         return $this;
     }

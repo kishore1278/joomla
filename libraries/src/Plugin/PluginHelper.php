@@ -47,17 +47,7 @@ abstract class PluginHelper
      */
     public static function getLayoutPath($type, $name, $layout = 'default')
     {
-        $app = Factory::getApplication();
-
-        if ($app->isClient('site') || $app->isClient('administrator')) {
-            $templateObj = $app->getTemplate(true);
-        } else {
-            $templateObj = (object) [
-                'template' => '',
-                'parent'   => '',
-            ];
-        }
-
+        $templateObj   = Factory::getApplication()->getTemplate(true);
         $defaultLayout = $layout;
         $template      = $templateObj->template;
 
@@ -70,26 +60,25 @@ abstract class PluginHelper
         }
 
         // Build the template and base path for the layout
-        $layoutPaths = [];
+        $tPath = JPATH_THEMES . '/' . $template . '/html/plg_' . $type . '_' . $name . '/' . $layout . '.php';
+        $iPath = JPATH_THEMES . '/' . $templateObj->parent . '/html/plg_' . $type . '_' . $name . '/' . $layout . '.php';
+        $bPath = JPATH_PLUGINS . '/' . $type . '/' . $name . '/tmpl/' . $defaultLayout . '.php';
+        $dPath = JPATH_PLUGINS . '/' . $type . '/' . $name . '/tmpl/default.php';
 
-        if ($template) {
-            $layoutPaths[] = JPATH_THEMES . '/' . $template . '/html/plg_' . $type . '_' . $name . '/' . $layout . '.php';
+        // If the template has a layout override use it
+        if (is_file($tPath)) {
+            return $tPath;
         }
 
-        if ($templateObj->parent) {
-            $layoutPaths[] = JPATH_THEMES . '/' . $templateObj->parent . '/html/plg_' . $type . '_' . $name . '/' . $layout . '.php';
+        if (!empty($templateObj->parent) && is_file($iPath)) {
+            return $iPath;
         }
 
-        $layoutPaths[] = JPATH_PLUGINS . '/' . $type . '/' . $name . '/tmpl/' . $defaultLayout . '.php';
-        $layoutPaths[] = JPATH_PLUGINS . '/' . $type . '/' . $name . '/tmpl/default.php';
-
-        foreach ($layoutPaths as $path) {
-            if (is_file($path)) {
-                return $path;
-            }
+        if (is_file($bPath)) {
+            return $bPath;
         }
 
-        return end($layoutPaths);
+        return $dPath;
     }
 
     /**
