@@ -41,5 +41,5 @@ jobs:
            echo "connection made"
       - name: Connect to EC2 and Copy Files
         run: |
-          ssh -vvv -o StrictHostKeyChecking=no root@172.178.35.200 "cd /var/www/html && git pull https://github.com/kishore1278/joomla.git master"
+          ssh -vvv -o StrictHostKeyChecking=no root@172.178.35.200 "cd /var/www/html && git pull"
           
