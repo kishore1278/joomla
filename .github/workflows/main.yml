@@ -30,16 +30,16 @@ jobs:
           whoami
           echo "${{ secrets.JOOMLA_AZURE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa    
-          ssh-keyscan 172.178.35.200 >> /home/runner/.ssh/known_hosts
+          ssh-keyscan 20.189.119.78 >> /home/runner/.ssh/known_hosts
           cat '/home/runner/.ssh/known_hosts'
           echo "end of ssh key setup"
  
 
       - name: Connect to EC2 and Run Commands
         run: |
-          ssh -vvv -o StrictHostKeyChecking=no root@172.178.35.200
+          ssh -vvv -o StrictHostKeyChecking=no root@20.189.119.78
            echo "connection made"
-      - name: Connect to EC2 and Copy Files
-        run: |
-          ssh -vvv -o StrictHostKeyChecking=no root@172.178.35.200 "mkdir -p /var/www/html && cd /var/www/html && rm -rf * && git init && git clone https://github.com/kishore1278/joomla.git && cp /var/www/configuration.php /var/www/html/joomla && cd /var/www/html/joomla && chmod +x dp.sh && ./dp.sh"
+      #- name: Connect to EC2 and Copy Files
+       # run: |
+        #  ssh -vvv -o StrictHostKeyChecking=no root@20.189.119.78 "mkdir -p /var/www/html && cd /var/www/html && rm -rf * && git init && git clone https://github.com/kishore1278/joomla.git && cp /var/www/configuration.php /var/www/html/joomla && cd /var/www/html/joomla && chmod +x dp.sh && ./dp.sh"
           
