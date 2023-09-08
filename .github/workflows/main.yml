@@ -37,7 +37,7 @@ jobs:
 
       - name: Connect to EC2 and Run Commands
         run: |
-          ssh -vvv -o StrictHostKeyChecking=no azureuser@20.189.119.78
+          ssh -vvv -o StrictHostKeyChecking=no rootuser@52.139.170.98
            echo "connection made"
       #- name: Connect to EC2 and Copy Files
        # run: |
