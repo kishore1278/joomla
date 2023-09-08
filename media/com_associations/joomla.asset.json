@@ -91,12 +91,6 @@
     },
     {
       "name": "com_associations.sidebyside",
-      "type": "style",
-      "uri": "com_associations/sidebyside.min.css",
-      "version": "67b98eb070fc8d47e1ad643f18880f5dc583cad7"
-    },
-    {
-      "name": "com_associations.sidebyside",
       "type": "script",
       "uri": "com_associations/sidebyside.min.js",
       "dependencies": [
@@ -107,6 +101,12 @@
         "defer": true
       },
       "version": "ae61b2455a60b4d99c4c41b820e62b00f4ea8a8f"
+    },
+    {
+      "name": "com_associations.sidebyside",
+      "type": "style",
+      "uri": "com_associations/sidebyside.min.css",
+      "version": "67b98eb070fc8d47e1ad643f18880f5dc583cad7"
     }
   ]
 }

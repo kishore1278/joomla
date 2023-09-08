@@ -30,7 +30,7 @@ class InstalledVersions
     'aliases' => 
     array (
     ),
-    'reference' => '0b162d3354d482115ddcb5b022b7f9eaf5019143',
+    'reference' => 'e17e90481d73bb9fffd55706fca0a12f2346b9dd',
     'name' => 'joomla/joomla-cms',
   ),
   'versions' => 
@@ -303,7 +303,7 @@ class InstalledVersions
       'aliases' => 
       array (
       ),
-      'reference' => '0b162d3354d482115ddcb5b022b7f9eaf5019143',
+      'reference' => 'e17e90481d73bb9fffd55706fca0a12f2346b9dd',
     ),
     'joomla/ldap' => 
     array (

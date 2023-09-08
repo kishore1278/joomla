@@ -46,20 +46,21 @@
       "attributes": {
         "type": "module"
       },
-      "version": "399bcc84bd622b61ca93c911937139d00833116d"
+      "version": "4428c99e6f51b84b46ecfa28eb332a5d1b98b9fd"
     },
     {
       "name": "com_media.mediamanager.es5",
       "type": "script",
       "uri": "com_media/media-manager-es5.min.js",
       "dependencies": [
-        "core"
+        "core",
+        "messages"
       ],
       "attributes": {
         "nomodule": true,
         "defer": true
       },
-      "version": "de9e6d94919402c95103f4ac10d42949da66827d"
+      "version": "b922ff142cea28437efdc3827a3ff69f6f9edcbb"
     }
   ]
 }

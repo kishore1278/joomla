@@ -45,17 +45,16 @@
       "version": "e9056077971a5fda5e548ac78db5b52df6adbd8a"
     },
     {
-      "name": "com_content.admin-articles-batch.es5",
+      "name": "com_content.admin-article-readmore",
       "type": "script",
-      "uri": "com_content/admin-articles-default-batch-footer-es5.min.js",
+      "uri": "com_content/admin-article-readmore.min.js",
       "dependencies": [
-        "core"
+        "com_content.admin-article-readmore.es5"
       ],
       "attributes": {
-        "nomodule": true,
-        "defer": true
+        "type": "module"
       },
-      "version": "3660f7dadca40d79416fff13b55596f0cec73cd9"
+      "version": "972e49ef8b21b3d361e6ac7eae55104a7e1fc04c"
     },
     {
       "name": "com_content.admin-articles-batch",
@@ -68,18 +67,6 @@
         "type": "module"
       },
       "version": "9ac1245a9dd2a9bf7e7f95c6e7e24f6075eef0ae"
-    },
-    {
-      "name": "com_content.admin-article-readmore",
-      "type": "script",
-      "uri": "com_content/admin-article-readmore.min.js",
-      "dependencies": [
-        "com_content.admin-article-readmore.es5"
-      ],
-      "attributes": {
-        "type": "module"
-      },
-      "version": "972e49ef8b21b3d361e6ac7eae55104a7e1fc04c"
     },
     {
       "name": "com_content.admin-articles-stage",
@@ -119,6 +106,19 @@
       "version": "bed8db4d9dd739752dae07292d0c67de99d7a152"
     },
     {
+      "name": "com_content.admin-articles-batch.es5",
+      "type": "script",
+      "uri": "com_content/admin-articles-default-batch-footer-es5.min.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "nomodule": true,
+        "defer": true
+      },
+      "version": "3660f7dadca40d79416fff13b55596f0cec73cd9"
+    },
+    {
       "name": "com_content.form-edit.es5",
       "type": "script",
       "uri": "com_content/form-edit-es5.min.js",
@@ -132,17 +132,28 @@
       "version": "fc4b76ea1663996a562188e400ba11c58c5ce5f9"
     },
     {
-      "name": "com_content.articles-list.es5",
+      "name": "com_content.form-edit",
       "type": "script",
-      "uri": "com_content/articles-list-es5.min.js",
+      "uri": "com_content/form-edit.min.js",
       "dependencies": [
-        "core"
+        "com_content.form-edit.es5"
       ],
       "attributes": {
-        "nomodule": true,
-        "defer": true
+        "type": "module"
       },
-      "version": "4d40a071d6672febde9190f361c8adecc94917d8"
+      "version": "d12afb233cbc93cdf16c2c6bdf4066981f3e2f21"
+    },
+    {
+      "name": "com_content.articles-status",
+      "type": "script",
+      "uri": "com_content/articles-status.min.js",
+      "dependencies": [
+        "com_content.articles-status.es5"
+      ],
+      "attributes": {
+        "type": "module"
+      },
+      "version": "bab2dc69a310da654f103df16f52fbc062bac9c5"
     },
     {
       "name": "com_content.admin-articles-stage.es5",
@@ -158,30 +169,6 @@
       "version": "361f99af1774ed60da28e3c2b8c6089c1e020b3f"
     },
     {
-      "name": "com_content.articles-status",
-      "type": "script",
-      "uri": "com_content/articles-status.min.js",
-      "dependencies": [
-        "com_content.articles-status.es5"
-      ],
-      "attributes": {
-        "type": "module"
-      },
-      "version": "bab2dc69a310da654f103df16f52fbc062bac9c5"
-    },
-    {
-      "name": "com_content.form-edit",
-      "type": "script",
-      "uri": "com_content/form-edit.min.js",
-      "dependencies": [
-        "com_content.form-edit.es5"
-      ],
-      "attributes": {
-        "type": "module"
-      },
-      "version": "d12afb233cbc93cdf16c2c6bdf4066981f3e2f21"
-    },
-    {
       "name": "com_content.articles-status.es5",
       "type": "script",
       "uri": "com_content/articles-status-es5.min.js",
@@ -193,6 +180,19 @@
         "defer": true
       },
       "version": "ad26c4dfb965fad9cf0976bb5d6395808828d3a1"
+    },
+    {
+      "name": "com_content.articles-list.es5",
+      "type": "script",
+      "uri": "com_content/articles-list-es5.min.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "nomodule": true,
+        "defer": true
+      },
+      "version": "4d40a071d6672febde9190f361c8adecc94917d8"
     },
     {
       "name": "com_content.articles-list",
