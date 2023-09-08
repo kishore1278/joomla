@@ -30,7 +30,7 @@ jobs:
           whoami
           echo "${{ secrets.JOOMLA_AZURE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa    
-          ssh-keyscan 20.189.119.78 >> /home/runner/.ssh/known_hosts
+          ssh-keyscan 52.139.170.98 >> /home/runner/.ssh/known_hosts
           cat '/home/runner/.ssh/known_hosts'
           echo "end of ssh key setup"
  
