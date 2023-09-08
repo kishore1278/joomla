@@ -16,7 +16,7 @@
 			label="JOPTION_SELECT_STAGE"
 			class="js-select-submit-on-change"
 			activeonly="true"
-			extension="com_content.article"
+			extension="com_content"
 			>
 			<option value="">JOPTION_SELECT_STAGE</option>
 		</field>
